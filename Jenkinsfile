@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            echo 'Hello World'
+            echo 'Hello World sample functions'
          }
       }
       stage ('Terraform Init'){
@@ -25,6 +25,7 @@ pipeline {
           }
       }
       
+	  
       stage ('Terraform Destroy'){
           steps {
              sh 'terraform destroy -input=false -auto-approve'
